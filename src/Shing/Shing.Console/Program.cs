@@ -34,7 +34,7 @@
             Console.ReadKey();
         }
 
-        private static void PrintResults(string amazonBaseShortLink, List<string> productIds)
+        private static void PrintResults(string amazonBaseShortLink, IEnumerable<string> productIds)
         {
             foreach (var productId in productIds)
             {

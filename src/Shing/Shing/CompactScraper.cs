@@ -9,28 +9,22 @@ namespace WishlistScraper.Scraper
 {
     public class CompactScraper
     {
-        string _regex = "/dp/(.*?)/";
+        private const string WishListRegex = "/dp/(.*?)/";
 
         /// <summary>
         /// Returns a list of product ID's
         /// </summary>
         /// <returns></returns>
-        public List<string> Scrape(string urlToScrape)
+        public IEnumerable<string> Scrape(string urlToScrape)
         {
-            var webClient = new WebClient();
+            var content = new WebClient().DownloadString(urlToScrape);
 
-            var content = webClient.DownloadString(urlToScrape);
-
-            var matches = Regex.Matches(content, _regex);
-
-            var productIds = new List<string>();
+            var matches = Regex.Matches(content, WishListRegex);
 
             foreach (Match match in matches)
             {
-                productIds.Add(match.Groups[1].Value);
+                yield return match.Groups[1].Value;
             }
-
-            return productIds;
         }
     }
 }
