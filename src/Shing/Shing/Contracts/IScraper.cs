@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Shing.Contracts
 {
-    public interface Scraper
+    public interface IScraper
     {
-        IEnumerable<WishListItem> Scrape();
+        IEnumerable<IWishListItem> Scrape();
     }
 }

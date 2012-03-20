@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Shing.Models
 {
-    public class WishListItem : Contracts.WishListItem
+    public class WishListItem : Contracts.IWishListItem
     {
         public string FriendlyName
         {
