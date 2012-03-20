@@ -122,5 +122,30 @@ namespace Shing.Tests.Properties {
                 return ResourceManager.GetString("Compact_No_Items", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///&lt;script type=&quot;text/javascript&quot;&gt;    var ue_t0 = ue_t0 || +new Date();&lt;/script&gt;
+        ///&lt;script type=&apos;text/javascript&apos;&gt;
+        ///    var ue_id = &apos;0N5TX6KT034M7HWJPGHE&apos;,
+        ///ue_sid = &apos;186-1571468-1782915&apos;,
+        ///ue_mid = &apos;ATVPDKIKX0DER&apos;,
+        ///ue_url = &apos;/gp/registry/wishlist/3ON5W8HBTKUOI/ref=wl_web/uedata/186-1571468-1782915/NoPageType&apos;,
+        ///ue_furl = &apos;fls-na.amazon.com&apos;,
+        ///ue_pr = 0,
+        ///ue_navtiming = 1,
+        ///ue_rnt = 0,
+        ///ue_tm = 60000,
+        ///ue_wn = 4;
+        ///    var ueinit = (ueinit || 0) + 1; var ue = { t0: ue_t0, id: ue_id, url: ue_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Full_25_items {
+            get {
+                return ResourceManager.GetString("Full_25_items", resourceCulture);
+            }
+        }
     }
 }

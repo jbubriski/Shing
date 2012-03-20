@@ -7,6 +7,6 @@ namespace Shing.Contracts
 {
     public interface Scraper
     {
-        IEnumerable<WishListItem> Scrape( Uri endpoint );
+        IEnumerable<WishListItem> Scrape();
     }
 }

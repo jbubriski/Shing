@@ -10,7 +10,7 @@
                 return string.Empty;
             }
             var endPos = source.IndexOf( end, startPos );
-            return source.Substring( startPos, endPos - startPos );
+            return endPos == -1 ? string.Empty : source.Substring( startPos + start.Length, endPos - startPos - end.Length );
         }
     }
 }

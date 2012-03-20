@@ -127,4 +127,7 @@
   <data name="Compact_No_Items" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Samples\Compact_No_Items.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Full_25_items" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Samples\Full_25_items.htm;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>
