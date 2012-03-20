@@ -60,21 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="WishListScraperTests.cs" />
-=======
-    <Compile Include="CompactScraperTests.cs" />
->>>>>>> 0fcda79076a87c78c0894546db264298f2129c51
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Include="StringExtensionsTests.cs" />
->>>>>>> 0fcda79076a87c78c0894546db264298f2129c51
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
