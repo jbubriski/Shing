@@ -18,7 +18,7 @@ namespace WishlistScraper.Tests
             client.Setup( c => c.DownloadString( It.IsAny<Uri>() ) )
                     .Throws<System.Net.WebException>();
 
-            var scraper = new CompactScraper( new Uri("http://www.google.com"), client.Object );
+            var scraper = new GenericScraper( new Uri("http://www.google.com"), client.Object );
             Assert.Throws<System.Net.WebException>( () => scraper.Scrape() );
         }
 
@@ -29,7 +29,7 @@ namespace WishlistScraper.Tests
             client.Setup( c => c.DownloadString( It.IsAny<Uri>() ) )
                 .Returns( Resources.Compact_No_Items );
 
-            var scraper = new CompactScraper( new Uri( "http://www.google.com" ), client.Object );
+            var scraper = new GenericScraper( new Uri( "http://www.google.com" ), client.Object );
             var results = scraper.Scrape();
 
             results.ShouldBeEmpty();
@@ -42,7 +42,7 @@ namespace WishlistScraper.Tests
             client.Setup( c => c.DownloadString( It.IsAny<Uri>() ) )
                 .Returns( Resources.Compact_17_items );
 
-            var scraper = new CompactScraper( new Uri( "http://www.google.com" ), client.Object );
+            var scraper = new GenericScraper( new Uri( "http://www.google.com" ), client.Object );
             var results = scraper.Scrape();
 
             results.ShouldNotBeEmpty();

@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Text.RegularExpressions;
+using Shing;
+using Shing.Models;
 using Shing.Proxies;
 
 namespace Shing.Scrapers
 {
-    public class FullScraper : ScraperBase, Shing.Contracts.Scraper
+    public class GenericScraper : ScraperBase, Shing.Contracts.Scraper
     {
         private WebClientProxy _client;
         private Uri _endpoint;
 
-        public FullScraper( Uri endpoint, WebClientProxy client = null )
+        public GenericScraper( Uri endpoint, WebClientProxy client = null )
         {
             _client = client ?? new WebClientProxy();
             _endpoint = endpoint;
         }
-
+         
         /// <summary>
         /// Returns a list of product ID's
         /// </summary>
@@ -26,7 +27,7 @@ namespace Shing.Scrapers
             var content = _client.DownloadString( _endpoint );
 
             // trim out the stuff we don't care about
-            content = content.Between( "<table class=\"wlrdZeroTable\"", "<div class=\"pagDiv\">" );
+            //content = content.Between("wlrdZeroTable", "</form>");
 
             return GetItems( content );
         }

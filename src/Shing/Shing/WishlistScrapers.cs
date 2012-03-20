@@ -12,7 +12,7 @@ namespace Shing
         public static Shing.Contracts.Scraper For( Uri url )
         {
             var isCompact = url.OriginalString.IndexOf( "layout=compact" ) > -1;
-            return isCompact ? new CompactScraper( url ) : new FullScraper( url ) as Shing.Contracts.Scraper;
+            return isCompact ? new GenericScraper( url ) : new GenericScraper( url ) as Shing.Contracts.Scraper;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Shing.Scrapers
 {
     public abstract class ScraperBase
     {
-        private const string WishListRegex = "/dp/(.*?)/";
+        private const string WishListRegex = "/dp/(.*?)/ref=wl_it_dp_";
 
         public virtual IEnumerable<Shing.Contracts.WishListItem> GetItems( string responseHtml )
         {
