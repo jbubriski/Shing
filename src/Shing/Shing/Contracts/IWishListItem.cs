@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Shing.Contracts
 {
-    public interface WishListItem
+    public interface IWishListItem
     {
         string FriendlyName { get; }
         string ProductId { get; }
