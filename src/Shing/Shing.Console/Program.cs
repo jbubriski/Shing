@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using WishlistScraper.Scraper;
+    using Shing.Scrapers;
 
     internal class Program
     {
@@ -15,16 +15,18 @@
             var wishlistUrl = "http://www.amazon.com/gp/registry/wishlist/28B0NJ50RIV34/";
             var wishlistUrlCompact = "http://www.amazon.com/gp/registry/wishlist/28B0NJ50RIV34/?layout=compact";
 
-            var scraper = new CompactScraper();
+            var scraper = new CompactScraper( new Uri( wishlistUrl ) );
 
-            var productIds = scraper.Scrape( new Uri( wishlistUrl ) );
+            var productIds = scraper.Scrape();
 
             Console.WriteLine();
             Console.WriteLine( "Regular" );
             Console.WriteLine();
             PrintResults( amazonBaseShortLink, productIds );
 
-            productIds = scraper.Scrape( new Uri( wishlistUrlCompact ) );
+            scraper = new CompactScraper( new Uri( wishlistUrlCompact ) );
+
+            productIds = scraper.Scrape();
 
             Console.WriteLine();
             Console.WriteLine( "Compact" );
