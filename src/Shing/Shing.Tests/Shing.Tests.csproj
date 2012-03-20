@@ -89,7 +89,7 @@
     <Content Include="Samples\Compact.htm" />
     <Content Include="Samples\Compact_No_Items.htm" />
     <Content Include="Samples\Compact_17_items.htm" />
-    <Content Include="Samples\Full_28_items.htm" />
+    <Content Include="Samples\Full_25_items.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
