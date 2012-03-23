@@ -24,7 +24,7 @@
                 Console.WriteLine();
                 Console.WriteLine("Regular");
                 Console.WriteLine();
-                PrintResults(amazonBaseShortLink, productIds);
+                // PrintResults(amazonBaseShortLink, productIds);
 
                 scraper = new WishListScraper(new Uri(wishlistUrlCompact));
 
@@ -33,7 +33,7 @@
                 Console.WriteLine();
                 Console.WriteLine("Compact");
                 Console.WriteLine();
-                PrintResults(amazonBaseShortLink, productIds);
+                // PrintResults(amazonBaseShortLink, productIds);
 
                 Console.WriteLine("Done. Press any key to run again, or 'x' to exit");
             } while (Console.ReadKey().KeyChar != 'x');
