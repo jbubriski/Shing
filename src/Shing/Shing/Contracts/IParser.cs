@@ -7,7 +7,7 @@ namespace Shing.Contracts
 {
     public interface IParser : IDisposable
     {
-        string[] GetRawItems();
+        IEnumerable<HtmlAgilityPack.HtmlNode> GetRawItems();
         ICreator GetCreator();
         void SetSource(string htmlResponse);
     }

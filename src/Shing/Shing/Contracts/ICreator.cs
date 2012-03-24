@@ -7,6 +7,6 @@ namespace Shing.Contracts
 {
     public interface ICreator
     {
-        IWishListItem Create(string html);
+        IWishListItem Create(HtmlAgilityPack.HtmlNode item);
     }
 }

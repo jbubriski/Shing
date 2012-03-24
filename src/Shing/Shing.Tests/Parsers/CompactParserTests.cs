@@ -29,7 +29,7 @@ namespace Shing.Tests.Parsers
             var parser = new CompactParser();
             var creator = parser.GetCreator();
 
-            creator.ShouldBeType<CompactCreator>();
+            creator.ShouldBeType<DefaultCreator>();
         }
     }
 }

@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fizzler">
+      <HintPath>..\..\..\lib\Fizzler.dll</HintPath>
+    </Reference>
+    <Reference Include="Fizzler.Systems.HtmlAgilityPack">
+      <HintPath>..\..\..\lib\Fizzler.Systems.HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.3\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +55,7 @@
     <Compile Include="Contracts\IParser.cs" />
     <Compile Include="Contracts\IScraper.cs" />
     <Compile Include="Contracts\IWishListItem.cs" />
-    <Compile Include="Creators\CompactCreator.cs" />
+    <Compile Include="Creators\DefaultCreator.cs" />
     <Compile Include="Models\WishListItem.cs" />
     <Compile Include="Parsers\CompactParser.cs" />
     <Compile Include="Parsers\FullParser.cs" />
