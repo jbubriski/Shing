@@ -5,6 +5,8 @@ using System.Text;
 using Shing.Models;
 using System.Text.RegularExpressions;
 using Shing.Proxies;
+using HtmlAgilityPack;
+using Fizzler.Systems.HtmlAgilityPack;
 
 namespace Shing
 {
@@ -21,7 +23,8 @@ namespace Shing
 
         public string Scrape()
         {
-            var content = _client.DownloadString( _endpoint );
+            var url = _endpoint.GetLeftPart(UriPartial.Path) + "?items_per_page=300";
+            var content = _client.DownloadString(new Uri(url));
 
             return content;
         }
