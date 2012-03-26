@@ -23,7 +23,7 @@ namespace Shing.Parsers
 
         public IEnumerable<HtmlNode> GetRawItems()
         {
-            var matches = _dom.DocumentNode.QuerySelectorAll("tbody.itemWrapper");
+            var matches = _dom.DocumentNode.QuerySelectorAll("tbody[name].itemWrapper");
             return matches.Where( n => {
                 return n.QuerySelectorAll(".wlPrice, .wlPriceBold, .price")
                         .Any( match => !String.IsNullOrWhiteSpace( match.InnerText ));

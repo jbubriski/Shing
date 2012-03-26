@@ -47,7 +47,7 @@ namespace Shing.Tests.Creators
 
             var item = _parser.GetCreator().Create(items.First());
 
-            item.MoreInfoUrl.OriginalString.ShouldEqual("http://amzn.com/dp/0385344228/ref=wl_fv/186-1571468-1782915?_encoding=UTF8&coliid=ILUKZM2I137XH&colid=3ON5W8HBTKUOI");
+            item.MoreInfoUrl.OriginalString.ShouldEqual("http://www.amazon.com/Defending-Jacob-Novel-William-Landay/dp/0385344228/ref=wl_it_dp_v/186-1571468-1782915?ie=UTF8&coliid=ILUKZM2I137XH&colid=3ON5W8HBTKUOI");
         }
 
         [Fact]
