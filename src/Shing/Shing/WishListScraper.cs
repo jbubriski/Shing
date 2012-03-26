@@ -23,7 +23,7 @@ namespace Shing
 
         public string Scrape()
         {
-            var url = _endpoint.GetLeftPart(UriPartial.Path) + "?items_per_page=300";
+            var url = _endpoint.GetLeftPart(UriPartial.Path) + "?items-per-page=300";
             var content = _client.DownloadString(new Uri(url));
 
             return content;
