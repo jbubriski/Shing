@@ -13,7 +13,7 @@ namespace WishlistScraper.Tests
     {
 
         [Fact]
-        public void Scrape_HtmlContains28Items_Returns28ItemsInCollection()
+        public void Scrape_HtmlContains28Items_ReturnsResponseFromWebRequest()
         {
             var client = new Mock<WebClientProxy>(MockBehavior.Strict);
             client.Setup(c => c.DownloadString(It.IsAny<Uri>()))
@@ -23,7 +23,7 @@ namespace WishlistScraper.Tests
             var results = scraper.Scrape();
 
             results.ShouldNotBeEmpty();
-            Assert.Equal(25, results.Count());
+            results.ShouldEqual(Resources.Full_25_items);
         }
 
         [Fact]
@@ -35,33 +35,6 @@ namespace WishlistScraper.Tests
 
             var scraper = new WishListScraper(new Uri("http://www.google.com"), client.Object);
             Assert.Throws<System.Net.WebException>(() => scraper.Scrape());
-        }
-
-        [Fact]
-        public void Scrape_HtmlContainsNoMatchingProducts_ReturnsEmptyCollection()
-        {
-            var client = new Mock<WebClientProxy>(MockBehavior.Strict);
-            client.Setup(c => c.DownloadString(It.IsAny<Uri>()))
-                .Returns(Resources.Compact_No_Items);
-
-            var scraper = new WishListScraper(new Uri("http://www.google.com"), client.Object);
-            var results = scraper.Scrape();
-
-            results.ShouldBeEmpty();
-        }
-
-        [Fact]
-        public void Scrape_HtmlContains17Items_Returns17ItemsInCollection()
-        {
-            var client = new Mock<WebClientProxy>(MockBehavior.Strict);
-            client.Setup(c => c.DownloadString(It.IsAny<Uri>()))
-                .Returns(Resources.Compact_17_items);
-
-            var scraper = new WishListScraper(new Uri("http://www.google.com"), client.Object);
-            var results = scraper.Scrape();
-
-            results.ShouldNotBeEmpty();
-            Assert.Equal(17, results.Count());
         }
     }
 }

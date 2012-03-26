@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Shing.Contracts
 {
-    public interface IScraper
+    public interface ICreator
     {
-        string Scrape();
+        IWishListItem Create(HtmlAgilityPack.HtmlNode item);
     }
 }
