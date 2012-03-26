@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7CF124
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".meta", ".meta", "{43CA4A1F-4BE3-4CE6-9654-D0760118CD78}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\README = ..\..\README
+		..\..\README.markdown = ..\..\README.markdown
 	EndProjectSection
 EndProject
 Global
